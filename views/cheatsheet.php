@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Fuel PHP 1.2 Cheat Sheet by Novius Labs</title>
     <link rel="shortcut icon" href="http://fuelphp.com/addons/themes/fuel/img/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/static/modules/labs_cheatsheet/css/cheatsheet.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/static/modules/labs_cheatsheet/cheatsheet.css" type="text/css" media="all" />
 </head>
 <body>
 <?
@@ -20,12 +20,12 @@
 	    <header class="<?= $i != 0 ? 'print' : '' ?>">
 		    <div class="logo">
 			    <a href="http://www.novius-labs.com" title="Novius Labs">
-				    <img src="/static/modules/labs_cheatsheet/img/noviuslabs.jpg" />
+				    <img src="/static/modules/labs_cheatsheet/noviuslabs.jpg" />
 				    <span>http://www.novius-labs.com</span>
 			    </a>
 		    </div>
 		    <h1>
-			    <a href="http://fuelphp.com/"><img src="/static/modules/labs_cheatsheet/img/fuelphp.png" /> FuelPHP</a> <span>v1.1 Cheat Sheet</span>
+			    <a href="http://fuelphp.com/"><img src="/static/modules/labs_cheatsheet/fuelphp.png" /> FuelPHP</a> <span>v1.1 Cheat Sheet</span>
 		    </h1>
 		    <div class="pdf"><a href="/static/modules/labs_cheatsheet/fuelphp-cheatsheet.pdf" target="_blank">PDF</a></div>
 	    </header>
