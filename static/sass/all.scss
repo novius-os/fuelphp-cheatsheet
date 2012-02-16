@@ -1,0 +1,373 @@
+/***
+ IMPORT
+ ***/
+@import "compass/reset";
+@import "compass/css3";
+
+/***
+ VARS
+ ***/
+ 
+$standard:	14px;
+$small: 		12px;
+$smaller: 	11px;
+$big: 			15px;
+$bigger: 	22px;
+
+$standard-font-family: 	"Helvetica Neue", Helvetica, Arial, sans-serif;
+$alt-font-family: 				"Droid Sans", Helvetica, Arial, sans-serif;
+$title-font-family: 			"Droid Serif", Helvetica, Arial, sans-serif;
+
+$fuel-pink:		#C73DFF;
+$fuel-purple:	#8235FA;
+$light-grey:	#AAA;
+$dark-grey:		#333;
+
+/***
+ DESKTOP
+ ***/
+
+BODY {
+	font-family: $standard-font-family;
+	color: black;
+	font-size: $standard;
+	background-image: image-url("bg.jpg");
+	padding-bottom: 30px;
+}
+
+A {
+	color: $light-grey;
+	text-decoration: none;
+		
+	&:hover {
+		text-decoration:underline;
+	}
+	
+	&:active {
+		color: #a20;
+	}
+}
+
+.print {
+	display: none;
+}
+
+
+HEADER {
+	margin: 20px;
+	
+	h1 {
+    font-size: $bigger;
+		font-family: $title-font-family;
+		display: inline-block;
+		line-height: 24px;
+		color: white;
+		@include text-shadow(2px 2px 2px rgba(0,0,0,0.9));		
+		margin-left: 15px;
+		
+		a {		
+			background: image-url("logo-fuelphp.png") no-repeat;
+			vertical-align: bottom;
+			display: inline-block;
+			color: transparent;
+			text-indent: -9999px;
+			width: 147px;
+			height: 37px;
+			margin-right: 10px; 
+			@include text-shadow(none);		
+		}
+	}
+	
+	a.pdf {
+		font-family: $alt-font-family;
+		text-transform: uppercase;
+		font-size: $standard;
+		display: inline-block;
+		margin-left: 100px;
+		padding: 10px 15px;
+		color: white;
+		@include background-image(linear-gradient($fuel-purple, #7431D6));		
+		@include text-shadow(1px 1px 1px rgba(0,0,0,0.8));
+		border: 1px solid #B56CFF;
+		@include border-radius(2px);
+		vertical-align: top;
+		
+		&:hover {
+		  text-decoration: none;
+			border: 1px outset #B56CFF;			
+		}
+
+		&:active {
+			border: 1px inset #B56CFF;	
+			@include background-image(linear-gradient(#7431D6, $fuel-purple));
+			outline: 0;
+		}
+	}
+	
+	div.qr {
+		float: right;
+		background: rgba(255,255,255,0.9);
+		padding: 5px;
+		margin: 10px 50px 0 0;		
+		border-left: 5px solid $fuel-purple;
+		@include border-radius(5px);
+	}
+	
+	div.logo {
+		float: right;
+		width: 96px;
+		font-size: $smaller;
+		color: $light-grey;
+		padding: 8px 20px 18px;
+		border-right: 1px solid transparent; /* to avoid blinking on hover */
+		
+		img {
+		  margin-top: 5px;
+		}
+		
+		span {
+			display: none;
+		}		
+	
+		&:hover {
+			background-color: rgba(0,0,0,0.2);
+			border-right: 1px solid $fuel-purple;
+			@include border-radius(5px);
+		}
+	}	
+}
+
+SECTION {
+	color: $light-grey;
+	font-family: $alt-font-family;
+	font-size: $smaller;
+	margin: 40px 20px 20px;
+	
+	ul {
+		@include column-width(120px);
+		margin-left: 15px;
+		
+		span.return {
+			text-align: left;
+			width: 15px;
+		}
+	}
+}
+
+ARTICLE {
+	margin: 0 20px;	
+	background: image-url("splitter.png") repeat-x;
+	padding: 10px 10px 20px;
+	border-left: 1px solid transparent; /* to avoid blinking on hover */
+	
+	h2 {
+    font-size: $big;
+		font-family: $title-font-family;
+		color: white;
+		display: inline-block;
+		width: 100px;
+		margin: 3px 0 10px 0;
+		
+		a {
+			color: white;
+		}
+	}
+		
+	summary {
+    font-size: $small;
+		font-family: $alt-font-family;
+    color: white;
+		display: inline;
+	
+		a {
+			color: $light-grey;
+		}
+	}
+	
+	div {
+		display: none;
+	}
+	
+	.clear {
+		clear: both;
+	}
+	
+	ul {
+		@include column-width(305px);
+		@include column-gap(10px);
+	}
+	
+	&:hover {
+		background-color: rgba(0,0,0,0.2);
+		border-left: 1px solid $fuel-pink;
+		@include border-radius(5px);
+	}
+}
+
+span.return {
+    float: left;
+    display: inline-block;
+    text-align: right;
+    color : $fuel-purple;
+    width: 15px;
+}
+
+span.method {
+	display: block;
+	margin: 0 0 5px 20px;
+}
+
+span.access {
+	font-size: $smaller;
+}
+
+span.arguments {
+    font-size: $smaller;
+    color : $fuel-pink;
+    margin-left: 3px;
+}
+
+p.license {
+	margin: 40px 20px 0 20px;
+  font-size: $smaller;
+  color: $light-grey;
+	
+	a {
+  color: $light-grey;
+	}
+}
+
+/***
+ MOBILE
+ ***/
+
+@media screen and (max-width:640px) {
+  HEADER {
+		h1 {
+			width: 100%;
+			
+			a {
+			  display: block;
+				margin-bottom: 5px;
+			}
+		}
+		
+		a.pdf, div.qr  {
+			display: none;
+		}
+		
+		div.logo {
+		  margin-top: 20px;
+		}
+	}
+	
+	SECTION {
+		margin-top: 10px;
+	}
+	
+	ARTICLE {
+		summary {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/***
+ PRINT
+ ***/
+
+@media print {
+	BODY {
+		font-size: $small;
+		background-image: none;
+	}
+	
+	.print {
+		display: block;
+	}
+	
+	A {
+	  color: $dark-grey;
+	}
+	
+	HEADER {
+		margin: 0px 0px 15px;
+		
+		&.print {
+			page-break-before:always;
+		}		
+		
+		h1 {
+			font-size: $bigger;
+			font-family: $title-font-family;
+			line-height: 45px;
+			color: black;
+			@include text-shadow(none);		
+			vertical-align: top;
+			margin-left: 0;
+			
+			a {		
+				background: image-url("fuelphp-drops.png") no-repeat;				
+				color: black;
+				text-indent: 35px;
+				width: 115px;
+				vertical-align: top;
+			}
+		}
+		
+		a.pdf , div.qr {
+			display: none;
+		}
+		
+		div.logo {
+			img {
+			  width: 70px;
+			}
+			span {
+				display: inline;
+			}
+		}
+	}
+	
+	SECTION {
+		margin: 15px 0 20px 0;
+		font-size: 11px;
+		color: $dark-grey;
+		
+		ul {
+			margin-left: 0;
+		}
+	}
+	
+	ARTICLE {
+		margin: 0;
+		background-image: none;
+		border-top: 1px solid $light-grey;
+		padding: 5px 0;
+		
+		h2 {
+		  font-size: $standard;
+			margin: 0 0 3px 0;
+			
+			 a {
+				color: black;
+				padding-right: 10px;
+			}
+		}		
+		
+		summary {
+			display: none;
+		}
+		
+	  ul {
+			@include column-width(auto);
+			@include column-count(3);
+		}		
+	}
+	
+
+	span.arguments {
+		color : $fuel-purple;
+	}
+}

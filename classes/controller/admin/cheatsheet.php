@@ -27,7 +27,7 @@ class Controller_Admin_Cheatsheet extends \Controller {
 	private $count = array();
 	private $classes = array(
 		'http://docs.fuelphp.com/classes/agent/usage.html' => array(
-			'summary' => 'Retrieve information about browser based on the clients User Agent string (<a href="http://docs.fuelphp.com/classes/agent/config.html">Configuration</a>).',
+			'summary' => 'Retrieve information about the browser based on the clients User Agent string (<a href="http://docs.fuelphp.com/classes/agent/config.html">Configuration</a>).',
 		),
 		'http://docs.fuelphp.com/classes/arr.html' => array(
 			'summary' => 'Set of helper functions for working with arrays.',
@@ -292,7 +292,7 @@ class Controller_Admin_Cheatsheet extends \Controller {
 			),
 		),
 		'http://docs.fuelphp.com/classes/fieldset.html' => array(
-			'summary' => 'Create a form and handle it\'s validation in an object oriented way. See Form and Validation classes.',
+			'summary' => 'Create a form and handle its validation in an object oriented way. See Form and Validation classes.',
 			'methods' => array(
 				'forge' => array(
 					'return' => 'o',

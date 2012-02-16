@@ -1,0 +1,409 @@
+/***
+ IMPORT
+ ***/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/***
+ VARS
+ ***/
+/***
+ DESKTOP
+ ***/
+BODY {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 14px;
+  background-image: url('../images/bg.jpg?1328546127');
+  padding-bottom: 30px;
+}
+
+A {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+A:hover {
+  text-decoration: underline;
+}
+A:active {
+  color: #a20;
+}
+
+.print {
+  display: none;
+}
+
+HEADER {
+  margin: 20px;
+}
+HEADER h1 {
+  font-size: 22px;
+  font-family: "Droid Serif", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  line-height: 24px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  margin-left: 15px;
+}
+HEADER h1 a {
+  background: url('../images/logo-fuelphp.png?1328546813') no-repeat;
+  vertical-align: bottom;
+  display: inline-block;
+  color: transparent;
+  text-indent: -9999px;
+  width: 147px;
+  height: 37px;
+  margin-right: 10px;
+  text-shadow: none;
+}
+HEADER a.pdf {
+  font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 100px;
+  padding: 10px 15px;
+  color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8235fa), color-stop(100%, #7431d6));
+  background-image: -webkit-linear-gradient(#8235fa, #7431d6);
+  background-image: -moz-linear-gradient(#8235fa, #7431d6);
+  background-image: -o-linear-gradient(#8235fa, #7431d6);
+  background-image: -ms-linear-gradient(#8235fa, #7431d6);
+  background-image: linear-gradient(#8235fa, #7431d6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  border: 1px solid #B56CFF;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  vertical-align: top;
+}
+HEADER a.pdf:hover {
+  text-decoration: none;
+  border: 1px outset #B56CFF;
+}
+HEADER a.pdf:active {
+  border: 1px inset #B56CFF;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7431d6), color-stop(100%, #8235fa));
+  background-image: -webkit-linear-gradient(#7431d6, #8235fa);
+  background-image: -moz-linear-gradient(#7431d6, #8235fa);
+  background-image: -o-linear-gradient(#7431d6, #8235fa);
+  background-image: -ms-linear-gradient(#7431d6, #8235fa);
+  background-image: linear-gradient(#7431d6, #8235fa);
+  outline: 0;
+}
+HEADER div.qr {
+  float: right;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px;
+  margin: 10px 50px 0 0;
+  border-left: 5px solid #8235fa;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+HEADER div.logo {
+  float: right;
+  width: 96px;
+  font-size: 11px;
+  color: #aaaaaa;
+  padding: 8px 20px 18px;
+  border-right: 1px solid transparent;
+  /* to avoid blinking on hover */
+}
+HEADER div.logo img {
+  margin-top: 5px;
+}
+HEADER div.logo span {
+  display: none;
+}
+HEADER div.logo:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #8235fa;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+SECTION {
+  color: #aaaaaa;
+  font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  margin: 40px 20px 20px;
+}
+SECTION ul {
+  -moz-column-width: 120px;
+  -webkit-column-width: 120px;
+  -o-column-width: 120px;
+  column-width: 120px;
+  margin-left: 15px;
+}
+SECTION ul span.return {
+  text-align: left;
+  width: 15px;
+}
+
+ARTICLE {
+  margin: 0 20px;
+  background: url('../images/splitter.png?1329299317') repeat-x;
+  padding: 10px 10px 20px;
+  border-left: 1px solid transparent;
+  /* to avoid blinking on hover */
+}
+ARTICLE h2 {
+  font-size: 15px;
+  font-family: "Droid Serif", Helvetica, Arial, sans-serif;
+  color: white;
+  display: inline-block;
+  width: 100px;
+  margin: 3px 0 10px 0;
+}
+ARTICLE h2 a {
+  color: white;
+}
+ARTICLE summary {
+  font-size: 12px;
+  font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+  color: white;
+  display: inline;
+}
+ARTICLE summary a {
+  color: #aaaaaa;
+}
+ARTICLE div {
+  display: none;
+}
+ARTICLE .clear {
+  clear: both;
+}
+ARTICLE ul {
+  -moz-column-width: 305px;
+  -webkit-column-width: 305px;
+  -o-column-width: 305px;
+  column-width: 305px;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  -o-column-gap: 10px;
+  column-gap: 10px;
+}
+ARTICLE:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-left: 1px solid #c73dff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+span.return {
+  float: left;
+  display: inline-block;
+  text-align: right;
+  color: #8235fa;
+  width: 15px;
+}
+
+span.method {
+  display: block;
+  margin: 0 0 5px 20px;
+}
+
+span.access {
+  font-size: 11px;
+}
+
+span.arguments {
+  font-size: 11px;
+  color: #c73dff;
+  margin-left: 3px;
+}
+
+p.license {
+  margin: 40px 20px 0 20px;
+  font-size: 11px;
+  color: #aaaaaa;
+}
+p.license a {
+  color: #aaaaaa;
+}
+
+/***
+ MOBILE
+ ***/
+@media screen and (max-width:640px) {
+  HEADER h1 {
+    width: 100%;
+  }
+  HEADER h1 a {
+    display: block;
+    margin-bottom: 5px;
+  }
+  HEADER a.pdf, HEADER div.qr {
+    display: none;
+  }
+  HEADER div.logo {
+    margin-top: 20px;
+  }
+
+  SECTION {
+    margin-top: 10px;
+  }
+
+  ARTICLE summary {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+/***
+ PRINT
+ ***/
+@media print {
+  BODY {
+    font-size: 12px;
+    background-image: none;
+  }
+
+  .print {
+    display: block;
+  }
+
+  A {
+    color: #333333;
+  }
+
+  HEADER {
+    margin: 0px 0px 15px;
+  }
+  HEADER.print {
+    page-break-before: always;
+  }
+  HEADER h1 {
+    font-size: 22px;
+    font-family: "Droid Serif", Helvetica, Arial, sans-serif;
+    line-height: 45px;
+    color: black;
+    text-shadow: none;
+    vertical-align: top;
+    margin-left: 0;
+  }
+  HEADER h1 a {
+    background: url('../images/fuelphp-drops.png?1329320778') no-repeat;
+    color: black;
+    text-indent: 35px;
+    width: 115px;
+    vertical-align: top;
+  }
+  HEADER a.pdf, HEADER div.qr {
+    display: none;
+  }
+  HEADER div.logo img {
+    width: 70px;
+  }
+  HEADER div.logo span {
+    display: inline;
+  }
+
+  SECTION {
+    margin: 15px 0 20px 0;
+    font-size: 11px;
+    color: #333333;
+  }
+  SECTION ul {
+    margin-left: 0;
+  }
+
+  ARTICLE {
+    margin: 0;
+    background-image: none;
+    border-top: 1px solid #aaaaaa;
+    padding: 5px 0;
+  }
+  ARTICLE h2 {
+    font-size: 14px;
+    margin: 0 0 3px 0;
+  }
+  ARTICLE h2 a {
+    color: black;
+    padding-right: 10px;
+  }
+  ARTICLE summary {
+    display: none;
+  }
+  ARTICLE ul {
+    -moz-column-width: auto;
+    -webkit-column-width: auto;
+    -o-column-width: auto;
+    column-width: auto;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
+  }
+
+  span.arguments {
+    color: #8235fa;
+  }
+}
