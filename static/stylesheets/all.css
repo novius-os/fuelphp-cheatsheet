@@ -168,6 +168,7 @@ HEADER div.logo {
   padding: 8px 20px 18px;
   border-right: 1px solid transparent;
   /* to avoid blinking on hover */
+  margin-right: 100px;
 }
 HEADER div.logo img {
   margin-top: 5px;
@@ -281,13 +282,20 @@ span.arguments {
   margin-left: 3px;
 }
 
-p.license {
+p#license {
   margin: 40px 20px 0 20px;
   font-size: 11px;
   color: #aaaaaa;
 }
-p.license a {
+p#license a {
   color: #aaaaaa;
+}
+
+a#github img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
 }
 
 /***
@@ -306,6 +314,7 @@ p.license a {
   }
   HEADER div.logo {
     margin-top: 20px;
+    margin-right: 0;
   }
 
   SECTION {
@@ -315,6 +324,10 @@ p.license a {
   ARTICLE summary {
     display: block;
     margin-bottom: 10px;
+  }
+
+  a#github {
+    display: none;
   }
 }
 /***
@@ -358,6 +371,9 @@ p.license a {
   }
   HEADER a.pdf, HEADER div.qr {
     display: none;
+  }
+  HEADER div.logo {
+    margin-right: 0;
   }
   HEADER div.logo img {
     width: 70px;
@@ -405,5 +421,9 @@ p.license a {
 
   span.arguments {
     color: #8235fa;
+  }
+
+  a#github {
+    display: none;
   }
 }

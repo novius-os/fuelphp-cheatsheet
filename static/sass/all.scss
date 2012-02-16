@@ -52,7 +52,6 @@ A {
 	display: none;
 }
 
-
 HEADER {
 	margin: 20px;
 	
@@ -120,6 +119,7 @@ HEADER {
 		color: $light-grey;
 		padding: 8px 20px 18px;
 		border-right: 1px solid transparent; /* to avoid blinking on hover */
+		margin-right: 100px;
 		
 		img {
 		  margin-top: 5px;
@@ -227,7 +227,7 @@ span.arguments {
     margin-left: 3px;
 }
 
-p.license {
+p#license {
 	margin: 40px 20px 0 20px;
   font-size: $smaller;
   color: $light-grey;
@@ -235,6 +235,13 @@ p.license {
 	a {
   color: $light-grey;
 	}
+}
+
+a#github img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
 }
 
 /***
@@ -257,7 +264,8 @@ p.license {
 		}
 		
 		div.logo {
-		  margin-top: 20px;
+		  margin-top: 20px;			
+			margin-right: 0;
 		}
 	}
 	
@@ -270,6 +278,10 @@ p.license {
 			display: block;
 			margin-bottom: 10px;
 		}
+	}
+	
+	a#github {
+	  display: none;
 	}
 }
 
@@ -320,7 +332,8 @@ p.license {
 			display: none;
 		}
 		
-		div.logo {
+		div.logo {		
+			margin-right: 0;
 			img {
 			  width: 70px;
 			}
@@ -364,10 +377,13 @@ p.license {
 			@include column-width(auto);
 			@include column-count(3);
 		}		
-	}
-	
+	}	
 
 	span.arguments {
 		color : $fuel-purple;
+	}
+	
+	a#github {
+	  display: none;
 	}
 }
