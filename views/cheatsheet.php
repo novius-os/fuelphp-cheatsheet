@@ -51,7 +51,7 @@
 			    <li><span class="return">a</span> Array</li>
 			    <li><span class="return">m</span> Mixed</li>
 			    <li><span class="return">o</span> Object</li>
-			    <li><span class="return">r</span> Ressource</li>
+			    <li><span class="return">r</span> Resource</li>
 			    <li><span class="return">c</span> Closure</li>
 			    <li><span class="return">oc</span> Octal</li>
 			    <li><span class="return">-</span> Void</li>
